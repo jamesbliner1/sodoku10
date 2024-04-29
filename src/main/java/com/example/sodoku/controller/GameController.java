@@ -38,6 +38,7 @@ public class GameController {
         // inicializo la matriz en ceros
        inicializeArrayZeros();
        moatrarMatriz();
+        revisa();
         //cuadro 1
 
         int numerosIniciales = 4;
@@ -61,7 +62,7 @@ public class GameController {
 
     private String revisa(){
         System.out.println("Revisando");
-        return "Hola";
+        return "Hola Revisado";
     }
     private void verificarXY(int x, int y, int cuadroX, int cuadroY, int valueXY) {
         int checkValue = verificaCuadro(x, y, cuadroX, cuadroY, valueXY);
