@@ -1,0 +1,11 @@
+[33mcommit 59fd085ea4b19ea27953e0e18a2936368bedd52e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: jamesbliner1 <james.quijano@correounivalle.edu.co>
+Date:   Mon Apr 29 17:05:28 2024 -0500
+
+    Se usa la funcion incompleta revisa() en initialize
+
+[33mcommit f361e099ddacfc1a14b3bcfd3589f3187f996b6c[m
+Author: jamesbliner1 <james.quijano@correounivalle.edu.co>
+Date:   Mon Apr 29 13:19:58 2024 -0500
+
+    first commit

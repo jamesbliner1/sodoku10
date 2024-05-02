@@ -24,6 +24,8 @@ public class GameController {
     @FXML
 
     private int[][] array = new int[9][9];
+    private int random;
+    
 
 
     public void setWord(String namePlayer) {
@@ -38,7 +40,7 @@ public class GameController {
         // inicializo la matriz en ceros
        inicializeArrayZeros();
        moatrarMatriz();
-        revisa();
+
         //cuadro 1
 
         int numerosIniciales = 4;
@@ -48,7 +50,9 @@ public class GameController {
 
                x=generarNumeroAleatorio(3);
                y=generarNumeroAleatorio(3);
+                random=generarNumeroAleatorio(9);
 
+                revisa(x,y,random);
                 //TextField textFieldLetter = new TextField();
 
                 //textFieldLetter.setId("idText"+x+y);
@@ -60,10 +64,45 @@ public class GameController {
     }
 
 
-    private String revisa(){
+    private String revisa(int x,int y,int N1a9){
         System.out.println("Revisando");
-        return "Hola Revisado";
+        String row="",columna="";
+        row= revisaFila(x,y,N1a9);
+        columna=revisaColumna(x,y,N1a9);
+        return row+columna;
     }
+
+    private String revisaColumna(int x,int y,int N1a9)
+    {
+        System.out.println("Revisando Columna");
+        int contador=0;
+        String answer="";
+        for (int i=0;i<9;i++){
+            if(array[x][i]==N1a9){
+                contador=contador+1;
+                answer="se repite";
+            }
+        }
+        System.out.println(answer + contador);
+        return answer;
+    }
+
+    private String revisaFila(int x,int y,int N1a9){
+        System.out.println("Revisando fila "+y);
+        int contador=0;
+        String answer="";
+        for(int j=0;j<9;j++){
+                if(array[j][y]==N1a9){
+                    contador=contador+1;
+                    answer="se repite";
+                }
+
+            }
+
+        System.out.println(answer + contador);
+        return answer;
+    }
+
     private void verificarXY(int x, int y, int cuadroX, int cuadroY, int valueXY) {
         int checkValue = verificaCuadro(x, y, cuadroX, cuadroY, valueXY);
         while(checkValue != 1) {
